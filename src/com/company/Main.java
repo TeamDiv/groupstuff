@@ -52,23 +52,6 @@ public class Main {
 
         }
 
-        //Sort
-        boolean flag = true;
-        int k = 0;
-        while(flag == true && k < num_employees){
-            flag = false;
-            for(int l = 0; l < num_employees - k - 1; k++){
-                if(employees[k].get_employee_id().substring(0, 1).compareTo(employees[k+1].get_employee_id().substring(0, 1)) > 0){
-                    Employees temp;
-                    temp = employees[k];
-                    employees[k] = employees[k+1];
-                    employees[k+1] = temp;
-                    flag = true;
-                }
-            }
-            k++;
-        }
-
         for(int index = 0; index < num_employees; index++){
             System.out.println(employees[index].toString());
             System.out.println();
